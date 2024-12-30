@@ -1,0 +1,15 @@
+#cnn
+torch
+torchvision
+numpy
+matplotlib
+
+#captum
+scikit-image
+scikit-learn
+torchtext
+ipython
+opencv-python-headless
+
+
+torchvision --index-url https://download.pytorch.org/whl/cu118
