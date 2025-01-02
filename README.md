@@ -8,6 +8,7 @@ Explainability approaches applied to a ResNet50 and ResNet101 trained on CUB-200
 
 2. Install requirements by running:
    ```bash
+   cd CNN_classifier
    pip install -r requirements_cnn.txt
    
 3. Download the CUB-200-2011 dataset
