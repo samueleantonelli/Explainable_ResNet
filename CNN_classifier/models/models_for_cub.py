@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from utils.Config import Config
-from utils.weight_init import weight_init_kaiming
+from CNN_classifier.utils.Config import Config
+from CNN_classifier.utils.weight_init import weight_init_kaiming
 from torchvision import models
 import os
 import numpy as np
