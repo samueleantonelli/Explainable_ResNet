@@ -10,6 +10,7 @@ scikit-learn
 torchtext
 ipython
 opencv-python-headless
+lime
 
 
 torchvision --index-url https://download.pytorch.org/whl/cu118
