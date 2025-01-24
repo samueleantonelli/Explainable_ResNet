@@ -1,7 +1,7 @@
-# ResNet
+# Explainability for ResNet trained on CUB-200-2011
 Explainability approaches applied to a ResNet50 and ResNet101 trained on CUB-200-2011.
 
-# Steps to implement the code
+## Steps to implement the code
 
 1. Create a new environment with python >= 3.10
 
@@ -33,7 +33,7 @@ other specific arguments can be found in the file train.py
 On first attempt the code will extract the images before starting to train the ResNet, while on later trials the images will be ready to be used without this step.
 
 
-# Explainability
+## Explainability
 To start working with the explainability approaches, move on the **TorchVision_Interpret.ipynb**, outside CNN_classifier. This Jupyter notebook allows to pick one image out of the ones used in the ResNet training and testing and to apply five different explaination approaches.
 
 Since the trained models exceed the space to be uploaded on GitHub, before starting to look into interpretability it is necessary to train a model as previously explained.  
