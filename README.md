@@ -32,7 +32,7 @@ Explainability approaches applied to a ResNet50 and ResNet101 trained on CUB-200
 other specific arguments can be found in the file train.py
 On first attempt the code will extract the images before starting to train the ResNet, while on later trials the images will be ready to be used without this step.
 
-### N.B.: the model for ResNet50 is already available in the folder model_save1/ResNet/ResNet50.pkl. The model for ResNet101 required too much space and couldn't be uploaded. It is necessary to manually train it to use it in the explanation part. 
+#### N.B.: the model for ResNet50 is already available in the folder model_save1/ResNet/ResNet50.pkl. The model for ResNet101 required too much space and couldn't be uploaded. It is necessary to manually train it to use it in the explanation part. 
 
 ## Explainability
 To start working with the explainability approaches, move on the **TorchVision_Interpret_new.ipynb**, outside CNN_classifier. This Jupyter notebook allows to pick one image out of the ones used in the ResNet training and testing and to apply five different explaination approaches.
