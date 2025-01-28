@@ -6,6 +6,7 @@ matplotlib
 seaborn
 
 #captum
+captum
 scikit-image
 scikit-learn
 torchtext
