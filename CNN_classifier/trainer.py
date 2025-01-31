@@ -18,7 +18,6 @@ class NetworkManager(object):
         print('Starting to prepare network and data...')
 
         self.net = nn.DataParallel(self._net_choice(self.options['net_choice'])).to(self.device)
-        #self.net.load_state_dict(torch.load('/home/zhangyongshun/se_base_model/model_save/ResNet/backup/epoch120/ResNet50-finetune_fc_cub.pkl'))
         print('Network is as follows:')
         print(self.net)
         #print(self.net.state_dict())
@@ -27,9 +26,6 @@ class NetworkManager(object):
             self.net.parameters(), lr=self.options['base_lr'], momentum=self.options['momentum'], weight_decay=self.options['weight_decay']
         )
         self.schedule = torch.optim.lr_scheduler.StepLR(self.solver, step_size=30, gamma=0.1)
-        #self.schedule = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        #    self.solver, mode='max', factor=0.1, patience=3, verbose=True, threshold=1e-4
-        #)
 
         train_transform_list = [
             transforms.RandomResizedCrop(self.options['img_size']),
@@ -81,7 +77,6 @@ class NetworkManager(object):
                 num_total += labels.size(0)
                 train_loss_epoch.append(loss.item())
                 loss.backward()
-                #nn.utils.clip_grad_norm_(self.net.parameters(), 1.0)
                 self.solver.step()
 
             train_acc_epoch = num_correct.detach().cpu().numpy()*100 / num_total
@@ -94,9 +89,6 @@ class NetworkManager(object):
                 best_acc = test_acc_epoch
                 best_epoch = epoch+1
                 print('*', end='')
-                '''
-                torch.save(self.net.state_dict(), os.path.join(self.path['model_save'], self.options['net_choice'], self.options['net_choice']+str(self.options['model_choice'])+'.pkl'))
-                '''
                 model_dir = os.path.join(self.path['model_save'], self.options['net_choice'])
                 os.makedirs(model_dir, exist_ok=True)  # Ensure the directory exists
                 torch.save(self.net.state_dict(), os.path.join(model_dir, self.options['net_choice'] + str(self.options['model_choice']) + '.pkl'))
@@ -136,7 +128,6 @@ class NetworkManager(object):
             return ResNet(pre_trained=True, n_class=200, model_choice=self.options['model_choice'])
 
     def adjust_learning_rate(optimizer, epoch, args):
-        """Sets the learning rate to the initial LR decayed by 10 every 30 epochs"""
         lr = args.lr * (0.1 ** (epoch // 30))
         for param_group in optimizer.param_groups:
             param_group['lr'] = lr

@@ -1,6 +1,5 @@
 #cnn
 torch
-torchvision
 numpy
 matplotlib
 seaborn
@@ -13,6 +12,5 @@ torchtext
 ipython
 opencv-python-headless
 lime
-
-
 torchvision --index-url https://download.pytorch.org/whl/cu118
+
