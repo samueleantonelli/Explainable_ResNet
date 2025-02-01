@@ -19,7 +19,8 @@ Explainability approaches applied to a ResNet50 and ResNet101 trained on CUB-200
    wget https://data.caltech.edu/records/65de6-vp158/files/CUB_200_2011.tgz?download=1
    mv CUB_200_2011.tgz?download=1 CUB_200_2011.tgz
    tar -xvzf CUB_200_2011.tgz
-   mv CUB_200_2011.tgz Explainable_ResNet/CNN_classifier/CUB_200_2011
+   mv CUB_200_2011.tgz CUB_200_2011/
+   mv attributes.txt CUB_200_2011/
 
 4. Modify the paths as needed
    navigate to: **utils/Config.py** and modify the data_path and model_save_path with the personal paths.
