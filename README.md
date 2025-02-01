@@ -30,7 +30,7 @@ Explainability approaches applied to a ResNet50 and ResNet101 trained on CUB-200
     ```bash
     python train.py --net_choice ResNet --model_choice 50 #for training ResNet 50
     python train.py --net_choice ResNet --model_choice 101 #for training ResNet 101
-other specific arguments can be found in the file train.py
+other specific arguments, such as epochs number, can be found in the file train.py
 On first attempt the code will extract the images before starting to train the ResNet, while on later trials the images will be ready to be used without this step.
 
 #### N.B.: the model for ResNet50 is already available in the folder model_save1/ResNet/ResNet50.pkl. The model for ResNet101 required too much space and couldn't be uploaded. It is necessary to manually train it to use it in the explanation part. 
