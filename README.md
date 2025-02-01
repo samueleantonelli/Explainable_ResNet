@@ -18,7 +18,7 @@ Explainability approaches applied to a ResNet50 and ResNet101 trained on CUB-200
    ```bash
    wget https://data.caltech.edu/records/65de6-vp158/files/CUB_200_2011.tgz?download=1
    mv CUB_200_2011.tgz?download=1 CUB_200_2011.tgz
-   tar -xvzf CUB_200_2011.tgz #to open the dataset
+   tar -xvzf CUB_200_2011.tgz
    mv CUB_200_2011.tgz Explainable_ResNet/CNN_classifier/CUB_200_2011
 
 4. Modify the paths as needed
