@@ -36,7 +36,7 @@ On first attempt the code will extract the images before starting to train the R
 #### N.B.: the model for ResNet50 is already available in the folder model_save1/ResNet/ResNet50.pkl. The model for ResNet101 required too much space and couldn't be uploaded. It is necessary to manually train it to use it in the explanation part. 
 
 ## Explainability
-To start working with the explainability approaches, move on the **Explinability.ipynb**, outside CNN_classifier. This Jupyter notebook allows to pick one image out of the ones used in the ResNet training and testing and to apply five different explaination approaches.
+To start working with the explainability approaches, move on the **Explainability.ipynb**, outside CNN_classifier. This Jupyter notebook allows to pick one image out of the ones used in the ResNet training and testing and to apply five different explaination approaches.
 
 Please, before running the notebook modify the paths to the dataset in the second cell with your own.   
 
