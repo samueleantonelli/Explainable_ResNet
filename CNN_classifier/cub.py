@@ -110,3 +110,4 @@ class cub200(torch.utils.data.Dataset):
                     open(os.path.join(self.root, 'processed/train.pkl'), 'wb'))
         pickle.dump((test_data, test_labels),
                     open(os.path.join(self.root, 'processed/test.pkl'), 'wb'))
+
