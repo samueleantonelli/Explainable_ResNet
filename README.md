@@ -38,5 +38,5 @@ On first attempt the code will extract the images before starting to train the R
 ## Explainability
 To start working with the explainability approaches, move on the **Explinability.ipynb**, outside CNN_classifier. This Jupyter notebook allows to pick one image out of the ones used in the ResNet training and testing and to apply five different explaination approaches.
 
-Since the trained models exceed the space to be uploaded on GitHub, before starting to look into interpretability it is necessary to train a model as previously explained.  
+Please, before running the notebook modify the paths to the dataset in the second cell with your own.   
 
